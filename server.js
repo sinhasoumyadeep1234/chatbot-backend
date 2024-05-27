@@ -486,10 +486,10 @@ const con = mysql.createConnection({
 });
 
 // now define the routes
-// app.get("/", (req, res) => {
-//   // sending the html file as response..when the server starts at /
-//   res.sendFile(__dirname + "/index.html");
-// });
+app.get("/", (req, res) => {
+  // sending the html file as response..when the server starts at /
+  res.sendFile(__dirname + "/index.html");
+});
 
 // now start web socket connection
 io.on("connection", (socket) => {
