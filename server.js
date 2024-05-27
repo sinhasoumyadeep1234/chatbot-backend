@@ -479,10 +479,10 @@ const io = socketIo(server);
 // connecting with the database
 // creating a connnection with the database with the appropriate credentials
 const con = mysql.createConnection({
-  host: sql12.freesqldatabase.com,
-  user: sql12709632,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-  database: sql12709632,
+  database: process.env.DB_DATABASE_NAME
 });
 
 // now define the routes
